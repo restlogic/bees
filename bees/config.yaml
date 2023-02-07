@@ -1,0 +1,24 @@
+# https://docs.openshift.com/container-platform/4.7/jaeger/jaeger_install/rhbjaeger-deploying.html
+# jaeger_client/config.py
+
+enabled: true
+reporter_batch_size: 1
+logging: true
+metrics: true
+sampler:
+  type: const
+  param: true
+local_agent:
+  reporting_host: <REDACTED>
+  reporting_port: 6831
+#storage:
+#  type: elasticsearch
+#  elasticsearch:
+#    nodeCount: 3
+#    redundancyPolicy: SingleRedundancy
+#  esIndexCleaner:
+#    enabled: true
+#    numberOfDays: 7
+#    schedule: 55 23 * * *
+#  esRollover:
+#    schedule: '*/30 * * * *'
